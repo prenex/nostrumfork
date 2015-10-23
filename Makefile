@@ -11,8 +11,8 @@ $(BINNAME): framework.o Bundle.o BundleContext.o BundleEvent.o FrameworkEvent.o 
 doc: 
 	doxygen Doxyfile
 
-install: framework
-	cp framework $(BINDST)/$(BINNAME)
+install: $(BINNAME)
+	cp $(BINNAME) $(BINDST)/$(BINNAME)
 	rm -fr $(INCLUDEDST)/nosgi/
 	rm -fr $(INCLUDEDST)/osgi/
 	mkdir $(INCLUDEDST)/nosgi/
