@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Clock
+Bundle-SymbolicName: Clock
+Bundle-Version: 1.2.1
+Export-Package: org.osgi.time; version=1.1.1
+Bundle-Activator: Activator

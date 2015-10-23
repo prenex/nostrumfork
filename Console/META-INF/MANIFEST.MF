@@ -1,0 +1,3 @@
+Bundle-SymbolicName: Console
+Bundle-Activator: Activator
+Bundle-Version: 0.0.7
