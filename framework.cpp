@@ -32,6 +32,8 @@ static bool preloading = true;
 static bool saveOnExit = false;
 static pthread_cond_t shutdownSignal = PTHREAD_COND_INITIALIZER;
 static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+// Global pointer to the framework - useful for the stop operation
+static Framework *framework = nullptr;
 
 //private framework members
 set<FrameworkListener *> Framework::frameworkListeners;
@@ -264,6 +266,7 @@ void Framework::shutdown() {
 }
 
 void shutdownNOSGiFramework() {
+	framework->stop();
 }
 
 long Framework::getBundleId() const {
@@ -308,7 +311,8 @@ Package *Framework::isExport(string &package) const {
 
 int main() {
 	struct stat statbuf;
-	Framework::installBundle(new Framework()); //0 is framework
+	framework = new Framework();
+	Framework::installBundle(framework); //0 is framework
 	if (stat("./nosgiwork/", &statbuf)) { //first start
 		if (errno != ENOENT) {
 			perror("stat");

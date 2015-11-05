@@ -1,4 +1,4 @@
-CPPFLAGS=-I/usr/include -I./include -Wall -O2
+CPPFLAGS=-I/usr/include -I./include -Wall -std=c++11 -g #-O2
 BINNAME=nosgi
 BINDST=/usr/bin
 INCLUDEDST=/usr/include

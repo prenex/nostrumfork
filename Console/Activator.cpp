@@ -13,21 +13,18 @@
 #include "Activator.h"
 #include "Console.h"
 
-NOSGI_SETACTIVATOR(Activator)
 
-Console *console;
+OSGI_SETACTIVATOR(Activator)
 
-Activator::~Activator() {
-
-}
+Activator::~Activator() { }
 
 void Activator::start(BundleContext &context) {
-	console = new Console(context);
-	console->run();
+	Activator::console = new Console(context);
+	Activator::console->run();
 }
 
 void Activator::stop(BundleContext &context) {
-	console->stop();
-	delete console;
+	Activator::console->stop();
+	delete Activator::console;
 }
 

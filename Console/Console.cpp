@@ -12,7 +12,7 @@
 
 #include "Console.h"
 #include "Clock.h"
-#include <nosgi/framework/Bundle.h>
+#include <osgi/framework/Bundle.h>
 #include <nosgi/framework/ServiceReference.h>
 #include <cassert>
 #include <iostream>

@@ -13,7 +13,7 @@
 #ifndef CONSOLE_H
 #define CONSOLE_H
 
-#include <nosgi/framework/BundleContext.h>
+#include <osgi/framework/BundleContext.h>
 #include <pthread.h>
 
 class Console {

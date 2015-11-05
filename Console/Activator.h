@@ -13,14 +13,17 @@
 #ifndef ACTIVATOR_H
 #define ACTIVATOR_H
 
-#include <nosgi/framework/BundleActivator.h>
-#include <nosgi/framework/BundleContext.h>
+#include <osgi/framework/BundleActivator.h>
+#include <osgi/framework/BundleContext.h>
+#include "Console.h"
 
 class Activator : public BundleActivator {
 	public:
 		virtual ~Activator();
 		virtual void start(BundleContext &context);
 		virtual void stop(BundleContext &context);
+	private:
+		Console *console;
 };
 
 #endif

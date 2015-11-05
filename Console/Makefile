@@ -1,6 +1,6 @@
 FRAMEWORKDIR=..
 CXX=g++
-CXXFLAGS=-Wall -I$(FRAMEWORKDIR)/include -I../Clock -fPIC -O2
+CXXFLAGS=-Wall -I$(FRAMEWORKDIR)/include -I../Clock -fPIC -g #-O2
 
 all: Activator.so
 
