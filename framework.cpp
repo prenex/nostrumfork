@@ -29,7 +29,7 @@ using namespace std;
 static map<long,Bundle *> bundleIds;
 static multimap<string,Bundle *> bundles;
 static bool preloading = true;
-static bool saveOnExit = false;
+static bool saveOnExit = true;
 static pthread_cond_t shutdownSignal = PTHREAD_COND_INITIALIZER;
 static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 // Global pointer to the framework - useful for the stop operation
